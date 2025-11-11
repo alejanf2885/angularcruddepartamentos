@@ -1,0 +1,24 @@
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex flex-col items-center py-10">
+    <section class="w-full max-w-md">
+        <h2 class="text-3xl font-extrabold mb-6 text-blue-800 text-center drop-shadow">Detalles del Departamento</h2>
+        <div class="bg-white p-6 rounded-xl shadow-lg border border-blue-200">
+            <p class="mb-4 flex items-center">
+                <span class="font-semibold text-blue-700 mr-2">Número:</span>
+                <span class="text-gray-800">{{ departamento.numero }}</span>
+            </p>
+            <p class="mb-4 flex items-center">
+                <span class="font-semibold text-blue-700 mr-2">Nombre:</span>
+                <span class="text-gray-800">{{ departamento.nombre }}</span>
+            </p>
+            <p class="mb-2 flex items-center">
+                <span class="font-semibold text-blue-700 mr-2">Localidad:</span>
+                <span class="text-gray-800">{{ departamento.localidad }}</span>
+            </p>
+        </div>
+    </section>
+    <div class="mt-10 flex justify-center">
+        <a href="/departamentos" class="inline-block px-8 py-3 bg-blue-600 text-white rounded-xl shadow-lg hover:bg-blue-700 transition-colors duration-200 font-bold tracking-wide">
+            Volver a la lista
+        </a>
+    </div>
+</div>

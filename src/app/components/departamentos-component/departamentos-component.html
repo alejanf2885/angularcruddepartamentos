@@ -1,0 +1,15 @@
+<div class="p-6 bg-gray-100 min-h-screen">
+  <section class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6">
+    <h1 class="text-2xl font-bold mb-4 text-gray-800 text-center">Departamentos</h1>
+    <div class="space-y-3">
+      @for (dep of departamentos; track $index) {
+      <div class="flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition-colors rounded-md p-3 shadow-sm">
+        <span class="font-medium text-gray-700">{{ dep.numero }}</span>
+        <span class="text-gray-600">{{ dep.nombre }}</span>
+        <span class="text-gray-500">{{ dep.localidad }}</span>
+        <span><button [routerLink]="['/detalles', dep.numero, dep.nombre, dep.localidad]">Detalles</button></span>
+      </div>
+      }
+    </div>
+  </section>
+</div>

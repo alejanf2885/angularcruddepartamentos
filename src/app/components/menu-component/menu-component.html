@@ -1,0 +1,33 @@
+<div>
+  <header class="bg-gray-800 text-white shadow-md">
+    <nav class="container mx-auto flex justify-between items-center p-4">
+      <!-- Logo -->
+      <div class="text-xl font-bold">
+        <a [routerLink]="['/']" class="hover:text-gray-300 transition-colors">MiApp</a>
+      </div>
+
+      <!-- Menú -->
+      <ul class="flex space-x-6">
+        <li>
+          <a [routerLink]="['/']" class="hover:text-gray-300 transition-colors">Inicio</a>
+        </li>
+        <li>
+          <a [routerLink]="['/departamentos']" class="hover:text-gray-300 transition-colors">Departamentos</a>
+        </li>
+        <li>
+          <a [routerLink]="['/crear']" class="hover:text-gray-300 transition-colors">Crear Departamento</a>
+        </li>
+      </ul>
+
+
+      <div class="md:hidden">
+        <button class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+</div>

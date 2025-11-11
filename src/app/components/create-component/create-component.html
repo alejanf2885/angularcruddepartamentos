@@ -1,0 +1,49 @@
+<div class="flex justify-center items-center min-h-screen bg-gray-100">
+  <section class="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-6 text-center text-gray-800">Creación de Departamento</h1>
+    <form action="" (ngSubmit)="crearDepartamento()" class="space-y-4">
+      <div>
+        <label for="numero" class="block text-gray-700 font-medium mb-1">Número:</label>
+        <input
+          [(ngModel)]="departamento.numero"
+          type="number"
+          id="numero"
+          name="numero"
+          placeholder="Id Departamento:"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+        />
+      </div>
+
+      <div>
+        <label for="nombre" class="block text-gray-700 font-medium mb-1">Nombre:</label>
+        <input
+          [(ngModel)]="departamento.nombre"
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Nombre Departamento:"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+        />
+      </div>
+
+      <div>
+        <label for="localidad" class="block text-gray-700 font-medium mb-1">Localidad:</label>
+        <input
+          [(ngModel)]="departamento.localidad"
+          type="text"
+          id="localidad"
+          name="localidad"
+          placeholder="Localidad Departamento:"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors"
+      >
+        Crear Departamento
+      </button>
+    </form>
+  </section>
+</div>
