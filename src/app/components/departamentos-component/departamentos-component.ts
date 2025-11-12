@@ -22,6 +22,12 @@ export class DepartamentosComponent implements OnInit {
     })
   }
 
+  public deleteDepartamento(id: number): void {
+    this._service.deleteDepartamento(id).then(() => {
+      this.departamentos = this.departamentos.filter(departamento => departamento.numero !== id);
+    }); 
+  }
+
 
   
 }

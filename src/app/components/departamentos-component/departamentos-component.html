@@ -3,11 +3,36 @@
     <h1 class="text-2xl font-bold mb-4 text-gray-800 text-center">Departamentos</h1>
     <div class="space-y-3">
       @for (dep of departamentos; track $index) {
-      <div class="flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition-colors rounded-md p-3 shadow-sm">
+      <div
+        class="flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition-colors rounded-md p-3 shadow-sm"
+      >
         <span class="font-medium text-gray-700">{{ dep.numero }}</span>
         <span class="text-gray-600">{{ dep.nombre }}</span>
         <span class="text-gray-500">{{ dep.localidad }}</span>
-        <span><button [routerLink]="['/detalles', dep.numero, dep.nombre, dep.localidad]">Detalles</button></span>
+        <span
+          ><button
+            class="bg-blue-500 rounded-full px-3 text-white hover:bg-blue-600 transition-all duration-200 font-semibold shadow-md hover:shadow-lg hover:cursor-pointer"
+            [routerLink]="['/detalles', dep.numero, dep.nombre, dep.localidad]"
+          >
+            Detalles
+          </button></span
+        >
+        <span
+          ><button
+            class="bg-blue-500 rounded-full px-3 text-white hover:bg-blue-600 transition-all duration-200 font-semibold shadow-md hover:shadow-lg hover:cursor-pointer"
+            [routerLink]="['/editar', dep.numero]"
+          >
+            Editar
+          </button></span
+        >
+        <span
+          ><button
+            class="bg-blue-500 rounded-full px-3 text-white hover:bg-blue-600 transition-all duration-200 font-semibold shadow-md hover:shadow-lg hover:cursor-pointer"
+            (click)="deleteDepartamento(dep.numero)"
+          >
+            Eliminar
+          </button></span
+        >
       </div>
       }
     </div>
